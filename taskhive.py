@@ -18,7 +18,7 @@ def main(argv, app):
     engine = QQmlEngine(app)
     engine.quit.connect(app.quit)
     component = QQmlComponent(engine)
-    component.loadUrl(QUrl('main_window.qml'))
+    component.loadUrl(QUrl('main.qml'))
     if component.isReady():
         mainWindow = component.create()
     else:

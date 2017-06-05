@@ -1,9 +1,7 @@
-import QtQuick 2.4
+import QtQuick 2.6
 
 SplashScreen {
     id: splash
-    color: "transparent"
-    flags: Qt.SplashScreen
     property int timeoutInterval: 2000
         signal timeout
         x: (Screen.width - splashImage.width) / 2
