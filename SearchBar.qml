@@ -1,5 +1,5 @@
-import QtQuick 2.7
-import QtQuick.Controls 1.4
+import QtQuick 2.1
+import QtQuick.Controls 1.1
 
 Rectangle {
     property bool ignoreTextChange: false
@@ -16,8 +16,6 @@ Rectangle {
             anchors.right: parent.right
             height: parent.height
             font.pointSize: 14
-            leftPadding: 60
-            topPadding: 12
             color: "#000000"
             onTextChanged: {
                 if(!ignoreTextChange)

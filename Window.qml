@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import QtQuick.Window 2.2
+import QtQuick.Controls 1.2
 Window {
         id: window
         minimumWidth: 1200
@@ -48,6 +49,16 @@ Window {
                         Image {
                             id: iconFilter
                             source: "icon-filter.svg"
+                        }
+                        Button {
+                            height: 100
+                            width: 100
+                            text: "Click me plz"
+                            onClicked: {
+                                var fileComponent = Qt.createComponent("FileUpload.qml")
+                                win = Qt.createQmlObject(window)
+                                win.show()
+                            }
                         }
                     }
                 }

@@ -1,12 +1,13 @@
-import QtQuick 2.6
+import QtQuick 2.1
 import QtQuick.Window 2.2
-
+import QtQuick.Controls 1.2
 QtObject {
     property var controlWindow: Window {
         id: window
         minimumWidth: 1200
         minimumHeight: 800
         color: "#0c0c0c"
+        title: "Taskhive"
         TopBar {
             id: toolbar
             width: window.width
@@ -50,6 +51,18 @@ QtObject {
                         Image {
                             id: iconFilter
                             source: "icon-filter.svg"
+                        }
+                        Button {
+                            height: 100
+                            width: 100
+                            text: "Click me plz"
+                            onClicked: {
+                                var fileComponent = Qt.createComponent("FileUpload.qml")
+                                console.log(fileComponent.errorString())
+                                var win = fileComponent.createObject(window)
+                                win.show()
+
+                            }
                         }
                     }
                 }
