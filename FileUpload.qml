@@ -1,7 +1,7 @@
 import QtQuick 2.2
 import QtQuick.Window 2.2
 import QtQuick.Controls 1.2
-import Qt.labs.platform 1.0
+import QtQuick.Dialogs 1.2
 import QtQuick.Layouts 1.1
 
 Window {
@@ -67,14 +67,9 @@ Window {
                     id: fileDialog
                     modality: Qt.WindowModal
                     title: "Choose some file"
-                    options: FileDialog.DontResolveSymLinks
                     nameFilters: ["Text files (*.txt)", "HTML files (*.html *.htm)"]
                     onAccepted: {
-                        var filePath = file.toString()
-                        if(filePath.startsWith('http://') || filePath.startsWith('https://')){
-                            fileDialog.close()
-                        }
-
+                        var filePath = fileUrl.toString()
                         console.log("Accepted: " + filePath)
                         var size = FileInfo.get_filesize(filePath)
                         fileSize = size
