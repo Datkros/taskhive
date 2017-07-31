@@ -15,7 +15,9 @@ Window {
 
     Image {
         id: splashImage
-        source: "logo.png"
+        source: "images/taskhive-symbol-yellow.svg"
+        sourceSize.width: 150
+        sourceSize.height: 150
         MouseArea {
             anchors.fill: parent
         }

@@ -47,7 +47,7 @@ def main(argv, app):
     engine = QQmlEngine(app)
     engine.quit.connect(app.quit)
     component = QQmlComponent(engine)
-    component.loadUrl(QUrl('main.qml'))
+    component.loadUrl(QUrl('Wizard/Wizard.qml'))
     if component.isReady():
         mainWindow = component.create()
         file = FileInfo()

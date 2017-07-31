@@ -6,29 +6,36 @@ Item {
     property variant searchItem
     signal clicked()
     Rectangle {
-        color: "#0c0c0c"
+        color: searchbar.resultBackgroundColor
         anchors.fill: parent
-        Text {
-            id: resultText
-            anchors.left: parent.left
-            anchors.leftMargin: 5
-            height: parent.height
-            font.pointSize: 14
-            color: "#fff"
-            text: qsTr("motion graphics")
-            verticalAlignment: Text.AlignVCenter
+        Row {
+            anchors.fill: parent
+            anchors.leftMargin: 10
+            anchors.rightMargin: 10
+            spacing: 40
+            Text {
+                id: resultText
+                anchors.leftMargin: 5
+                height: parent.height
+                font.pointSize: 14
+                color: "#fff"
+                text: searchItem.name
+                verticalAlignment: Text.AlignVCenter
+                width: repeater.columnWidths['name']
+            }
+            Text {
+                id: category
+                color: "gray"
+                opacity: 0.4
+                anchors.rightMargin: 5
+                font.pointSize: 14
+                text: searchItem.category
+                height: parent.height
+                verticalAlignment: Text.AlignVCenter
+                width: repeater.columnWidths['category']
+            }
         }
-        Text {
-            id: category
-            color: "gray"
-            opacity: 0.4
-            anchors.right: parent.right
-            anchors.rightMargin: 5
-            font.pointSize: 14
-            text: qsTr("related")
-            height: parent.height
-            verticalAlignment: Text.AlignVCenter
-        }
+
         Rectangle {
             width: parent.width
             height: 1

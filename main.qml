@@ -1,6 +1,7 @@
 import QtQuick 2.1
 import QtQuick.Window 2.2
 import QtQuick.Controls 1.2
+
 QtObject {
     property var controlWindow: Window {
         id: window
@@ -20,12 +21,12 @@ QtObject {
             anchors.top: toolbar.bottom
             color: "transparent"
             Rectangle {
-            color: "transparent"
-            id: requestsTitle
-            anchors.top: parent.top
-            width: parent.width
-            height: 45
-            anchors.topMargin: 50
+                color: "transparent"
+                id: requestsTitle
+                anchors.top: parent.top
+                width: parent.width
+                height: 45
+                anchors.topMargin: 50
                 Item {
                     anchors.leftMargin: 30
                     anchors.rightMargin: 30
@@ -57,7 +58,7 @@ QtObject {
                             width: 100
                             text: "Click me plz"
                             onClicked: {
-                                var fileComponent = Qt.createComponent("FileUpload.qml")
+                                var fileComponent = Qt.createComponent("Wizard.qml")
                                 console.log(fileComponent.errorString())
                                 var win = fileComponent.createObject(window)
                                 win.show()

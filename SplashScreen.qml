@@ -11,7 +11,7 @@ SplashScreen {
 
         Image {
             id: splashImage
-            source: "logo.png"
+            source: "images/taskhive-symbol-yellow.svg"
             MouseArea {
                 anchors.fill: parent
                 onClicked: Qt.quit()

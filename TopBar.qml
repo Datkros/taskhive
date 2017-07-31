@@ -46,12 +46,6 @@ Rectangle {
                     Layout.fillHeight: false
                     Layout.fillWidth: false
                 }
-                /*Image {
-                    id: networkRating
-                    anchors.left: toolBarTop.left
-                    height: parent.height
-                    source: "graphic-rating.svg"
-                } */
                 SearchBar {
                     id: search
                     height: 38
@@ -64,6 +58,7 @@ Rectangle {
                     anchors.right: icons.left
                     anchors.rightMargin: 20
                     anchors.verticalCenter: toolBarTop.verticalCenter
+                    resultBackgroundColor: "#0c0c0c"
                 }
                 Row {
                     id: icons
@@ -75,19 +70,19 @@ Rectangle {
                     spacing: 20
                     Image {
                         id: notificationIcon
-                        source: "icon-notification.svg"
+                        source: "images/icon-notification.svg"
                     }
                     Image {
                         id: msgIcon
-                        source: "icon-msg.svg"
+                        source: "images/icon-msg.svg"
                     }
                     Image {
                         id: contractsIcon
-                        source: "icon-contract.svg"
+                        source: "images/icon-contract.svg"
                     }
                     Image {
                         id: trustIcon
-                        source: "icon-trust.svg"
+                        source: "images/icon-trust.svg"
                     }
                 }
             }
