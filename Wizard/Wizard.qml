@@ -22,12 +22,6 @@ Window {
         color: "transparent"
         StackView {
             anchors.fill: parent
-            anchors.margins: {
-                left: 20
-                right: 20
-                top: 20
-                bottom: 20
-            }
             id: wizardStack
             initialItem: Qt.resolvedUrl('handle.qml')
 
